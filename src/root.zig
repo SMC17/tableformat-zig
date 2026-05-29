@@ -18,6 +18,13 @@ pub const widenType = schema_evolution.widenType;
 pub const canWiden = schema_evolution.canWiden;
 pub const SchemaEvolutionError = schema_evolution.Error;
 
+pub const manifest_entry = @import("manifest_entry.zig");
+pub const ManifestEntry = manifest_entry.ManifestEntry;
+pub const EntryStatus = manifest_entry.EntryStatus;
+pub const ManifestEntryList = manifest_entry.ManifestEntryList;
+pub const entriesFromDataFiles = manifest_entry.entriesFromDataFiles;
+pub const markDeleted = manifest_entry.markDeleted;
+
 test {
     @import("std").testing.refAllDecls(@This());
 }
