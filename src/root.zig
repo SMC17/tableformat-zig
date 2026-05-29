@@ -25,6 +25,13 @@ pub const ManifestEntryList = manifest_entry.ManifestEntryList;
 pub const entriesFromDataFiles = manifest_entry.entriesFromDataFiles;
 pub const markDeleted = manifest_entry.markDeleted;
 
+pub const partition_stats = @import("partition_stats.zig");
+pub const ColumnStats = partition_stats.ColumnStats;
+pub const FileStats = partition_stats.FileStats;
+pub const RangeOverlap = partition_stats.RangeOverlap;
+pub const pruneFileByRange = partition_stats.pruneFileByRange;
+pub const pruneFileByEquality = partition_stats.pruneFileByEquality;
+
 test {
     @import("std").testing.refAllDecls(@This());
 }
