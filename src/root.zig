@@ -32,6 +32,12 @@ pub const RangeOverlap = partition_stats.RangeOverlap;
 pub const pruneFileByRange = partition_stats.pruneFileByRange;
 pub const pruneFileByEquality = partition_stats.pruneFileByEquality;
 
+pub const manifest_rewrite = @import("manifest_rewrite.zig");
+pub const RewritePolicy = manifest_rewrite.RewritePolicy;
+pub const RewriteResult = manifest_rewrite.RewriteResult;
+pub const rewriteSmallLists = manifest_rewrite.rewriteSmallLists;
+pub const filterActive = manifest_rewrite.filterActive;
+
 test {
     @import("std").testing.refAllDecls(@This());
 }
