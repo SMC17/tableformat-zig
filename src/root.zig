@@ -38,6 +38,14 @@ pub const RewriteResult = manifest_rewrite.RewriteResult;
 pub const rewriteSmallLists = manifest_rewrite.rewriteSmallLists;
 pub const filterActive = manifest_rewrite.filterActive;
 
+pub const puffin = @import("puffin.zig");
+pub const PuffinBlob = puffin.Blob;
+pub const PuffinBlobType = puffin.BlobType;
+pub const PuffinReadResult = puffin.ReadResult;
+pub const writePuffin = puffin.write;
+pub const readPuffin = puffin.read;
+pub const puffin_magic = puffin.magic;
+
 test {
     @import("std").testing.refAllDecls(@This());
 }
