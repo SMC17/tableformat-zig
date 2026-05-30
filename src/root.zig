@@ -55,6 +55,13 @@ pub const PrincipalId = rbac.PrincipalId;
 pub const PrincipalRoleId = rbac.PrincipalRoleId;
 pub const CatalogRoleId = rbac.CatalogRoleId;
 
+pub const structural_invariants = @import("structural_invariants.zig");
+pub const assertStructuralPrefixStable = structural_invariants.assertStructuralPrefixStable;
+pub const checkStructuralPrefix = structural_invariants.checkStructuralPrefix;
+pub const firstPrefixViolation = structural_invariants.firstPrefixViolation;
+pub const PrefixViolation = structural_invariants.PrefixViolation;
+pub const ViolationReport = structural_invariants.ViolationReport;
+
 test {
     @import("std").testing.refAllDecls(@This());
 }
