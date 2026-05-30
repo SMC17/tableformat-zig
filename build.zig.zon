@@ -1,6 +1,6 @@
 .{
     .name = .tableformat,
-    .version = "0.0.1",
+    .version = "0.0.10",
     .fingerprint = 0x587e533b725cd839,
     .minimum_zig_version = "0.16.0",
     .paths = .{
