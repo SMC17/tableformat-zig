@@ -77,6 +77,10 @@ pub const DEFAULT_ASCII_GLYPH_RAMP = glyph_ramp.DEFAULT_ASCII_RAMP;
 pub const glyphIndex = glyph_ramp.glyphIndex;
 pub const glyphFor = glyph_ramp.glyphFor;
 
+pub const column_histogram = @import("column_histogram.zig");
+pub const ColumnHistogram = column_histogram.ColumnHistogram;
+pub const ColumnHistogramError = column_histogram.Error;
+
 test {
     @import("std").testing.refAllDecls(@This());
 }
