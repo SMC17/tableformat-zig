@@ -62,6 +62,14 @@ pub const firstPrefixViolation = structural_invariants.firstPrefixViolation;
 pub const PrefixViolation = structural_invariants.PrefixViolation;
 pub const ViolationReport = structural_invariants.ViolationReport;
 
+pub const staggered_grid = @import("staggered_grid.zig");
+pub const GridDims = staggered_grid.GridDims;
+pub const GridAxis = staggered_grid.Axis;
+pub const gridSlabLen = staggered_grid.slabLen;
+pub const gridIdx = staggered_grid.idx;
+pub const gridAxisStride = staggered_grid.axisStride;
+pub const gridInDomain = staggered_grid.inDomain;
+
 test {
     @import("std").testing.refAllDecls(@This());
 }
