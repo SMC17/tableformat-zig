@@ -87,6 +87,12 @@ pub const PairRowIterator = row_iterator.PairRowIterator;
 pub const TripletRowIterator = row_iterator.TripletRowIterator;
 pub const RowIteratorError = row_iterator.Error;
 
+pub const price_time_buffer = @import("price_time_buffer.zig");
+pub const PriceTimeKey = price_time_buffer.PriceTimeKey;
+pub const Order = price_time_buffer.Order;
+pub const PriceTimeBuffer = price_time_buffer.PriceTimeBuffer;
+pub const PriceTimeBufferError = price_time_buffer.Error;
+
 test {
     @import("std").testing.refAllDecls(@This());
 }
