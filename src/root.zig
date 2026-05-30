@@ -81,6 +81,12 @@ pub const column_histogram = @import("column_histogram.zig");
 pub const ColumnHistogram = column_histogram.ColumnHistogram;
 pub const ColumnHistogramError = column_histogram.Error;
 
+pub const row_iterator = @import("row_iterator.zig");
+pub const RowIterator = row_iterator.RowIterator;
+pub const PairRowIterator = row_iterator.PairRowIterator;
+pub const TripletRowIterator = row_iterator.TripletRowIterator;
+pub const RowIteratorError = row_iterator.Error;
+
 test {
     @import("std").testing.refAllDecls(@This());
 }
