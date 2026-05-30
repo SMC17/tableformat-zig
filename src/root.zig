@@ -46,6 +46,15 @@ pub const writePuffin = puffin.write;
 pub const readPuffin = puffin.read;
 pub const puffin_magic = puffin.magic;
 
+pub const rbac = @import("rbac.zig");
+pub const Rbac = rbac.Rbac;
+pub const Privilege = rbac.Privilege;
+pub const Securable = rbac.Securable;
+pub const Grant = rbac.Grant;
+pub const PrincipalId = rbac.PrincipalId;
+pub const PrincipalRoleId = rbac.PrincipalRoleId;
+pub const CatalogRoleId = rbac.CatalogRoleId;
+
 test {
     @import("std").testing.refAllDecls(@This());
 }
