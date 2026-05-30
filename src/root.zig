@@ -70,6 +70,13 @@ pub const gridIdx = staggered_grid.idx;
 pub const gridAxisStride = staggered_grid.axisStride;
 pub const gridInDomain = staggered_grid.inDomain;
 
+pub const glyph_ramp = @import("glyph_ramp.zig");
+pub const GlyphRamp = glyph_ramp.Ramp;
+pub const DEFAULT_UTF8_GLYPH_RAMP = glyph_ramp.DEFAULT_UTF8_RAMP;
+pub const DEFAULT_ASCII_GLYPH_RAMP = glyph_ramp.DEFAULT_ASCII_RAMP;
+pub const glyphIndex = glyph_ramp.glyphIndex;
+pub const glyphFor = glyph_ramp.glyphFor;
+
 test {
     @import("std").testing.refAllDecls(@This());
 }
