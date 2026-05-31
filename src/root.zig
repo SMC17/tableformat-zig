@@ -93,6 +93,11 @@ pub const Order = price_time_buffer.Order;
 pub const PriceTimeBuffer = price_time_buffer.PriceTimeBuffer;
 pub const PriceTimeBufferError = price_time_buffer.Error;
 
+pub const histogram_quantile = @import("histogram_quantile.zig");
+pub const quantileEstimate = histogram_quantile.quantileEstimate;
+pub const medianEstimate = histogram_quantile.medianEstimate;
+pub const HistogramQuantileError = histogram_quantile.Error;
+
 test {
     @import("std").testing.refAllDecls(@This());
 }
