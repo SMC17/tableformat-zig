@@ -128,10 +128,10 @@ test "quantileEstimate at q=0 returns near-bottom" {
     try testing.expect(v >= 5.0 and v < 6.0);
 }
 
-test "quantileEstimate at q=1 returns top" {
+test "quantileEstimate at q=1 returns top of bucket containing only sample" {
     var h = try ColumnHistogram.init(testing.allocator, 10, 0.0, 10.0);
     defer h.deinit();
     h.add(5.0);
     const v = try quantileEstimate(h, 1.0);
-    try testing.expectApproxEqAbs(@as(f64, 10.0), v, 1e-9);
+    try testing.expectApproxEqAbs(@as(f64, 6.0), v, 1e-9);
 }
