@@ -46,14 +46,6 @@ pub const writePuffin = puffin.write;
 pub const readPuffin = puffin.read;
 pub const puffin_magic = puffin.magic;
 
-pub const rbac = @import("rbac.zig");
-pub const Rbac = rbac.Rbac;
-pub const Privilege = rbac.Privilege;
-pub const Securable = rbac.Securable;
-pub const Grant = rbac.Grant;
-pub const PrincipalId = rbac.PrincipalId;
-pub const PrincipalRoleId = rbac.PrincipalRoleId;
-pub const CatalogRoleId = rbac.CatalogRoleId;
 
 pub const structural_invariants = @import("structural_invariants.zig");
 pub const assertStructuralPrefixStable = structural_invariants.assertStructuralPrefixStable;
@@ -62,41 +54,6 @@ pub const firstPrefixViolation = structural_invariants.firstPrefixViolation;
 pub const PrefixViolation = structural_invariants.PrefixViolation;
 pub const ViolationReport = structural_invariants.ViolationReport;
 
-pub const staggered_grid = @import("staggered_grid.zig");
-pub const GridDims = staggered_grid.GridDims;
-pub const GridAxis = staggered_grid.Axis;
-pub const gridSlabLen = staggered_grid.slabLen;
-pub const gridIdx = staggered_grid.idx;
-pub const gridAxisStride = staggered_grid.axisStride;
-pub const gridInDomain = staggered_grid.inDomain;
-
-pub const glyph_ramp = @import("glyph_ramp.zig");
-pub const GlyphRamp = glyph_ramp.Ramp;
-pub const DEFAULT_UTF8_GLYPH_RAMP = glyph_ramp.DEFAULT_UTF8_RAMP;
-pub const DEFAULT_ASCII_GLYPH_RAMP = glyph_ramp.DEFAULT_ASCII_RAMP;
-pub const glyphIndex = glyph_ramp.glyphIndex;
-pub const glyphFor = glyph_ramp.glyphFor;
-
-pub const column_histogram = @import("column_histogram.zig");
-pub const ColumnHistogram = column_histogram.ColumnHistogram;
-pub const ColumnHistogramError = column_histogram.Error;
-
-pub const row_iterator = @import("row_iterator.zig");
-pub const RowIterator = row_iterator.RowIterator;
-pub const PairRowIterator = row_iterator.PairRowIterator;
-pub const TripletRowIterator = row_iterator.TripletRowIterator;
-pub const RowIteratorError = row_iterator.Error;
-
-pub const price_time_buffer = @import("price_time_buffer.zig");
-pub const PriceTimeKey = price_time_buffer.PriceTimeKey;
-pub const Order = price_time_buffer.Order;
-pub const PriceTimeBuffer = price_time_buffer.PriceTimeBuffer;
-pub const PriceTimeBufferError = price_time_buffer.Error;
-
-pub const histogram_quantile = @import("histogram_quantile.zig");
-pub const quantileEstimate = histogram_quantile.quantileEstimate;
-pub const medianEstimate = histogram_quantile.medianEstimate;
-pub const HistogramQuantileError = histogram_quantile.Error;
 
 test {
     @import("std").testing.refAllDecls(@This());
