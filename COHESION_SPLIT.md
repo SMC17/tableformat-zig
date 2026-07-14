@@ -13,7 +13,7 @@ dependency-free packages**:
 | `row_iterator.zig` | SMC17/column-iter-zig |
 | `price_time_buffer.zig` | SMC17/order-primitives-zig |
 | `column_histogram.zig`, `histogram_quantile.zig` | SMC17/streaming-stats-zig |
-| `tableformat_persistence.zig`, `tableformat_rowgroup.zig` (bridge) | moved in from workflow-event-log-zig (they import the `tableformat` module natively) |
+| `tableformat_persistence.zig`, `tableformat_rowgroup.zig` (bridge) | **stay in workflow-event-log-zig** — they import the `tableformat` module but are used by `compaction_exec.zig`; moving them requires refactoring `compaction_exec` to call the `tableformat` package. Tracked as a follow-up (not done this pass to avoid breaking the build). |
 
 Verification: after extraction `zig build test` passes (52/52). The data-quality
 / table-format API is now free of RBAC / grid / ramp / order / stats baggage.
