@@ -25,6 +25,14 @@
       "minimum_tests": 52
     },
     {
+      "name": "install fixture binary",
+      "argv": [
+        "zig",
+        "build",
+        "-Doptimize=ReleaseSafe"
+      ]
+    },
+    {
       "name": "synthetic task",
       "argv": [
         "zig",
