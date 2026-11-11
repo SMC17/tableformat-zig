@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-11 self-serve task
+
+- Add a runnable synthetic task, clean-source packager and gated preview workflow.
+
 ## 0.0.1 — 2026-05-28
 
 Data shapes for Iceberg-class table format: ColumnType / Schema / Transform /
