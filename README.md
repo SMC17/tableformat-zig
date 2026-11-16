@@ -56,3 +56,7 @@ Concepts adapted from Airbnb (Iceberg adoption) + Netflix (Iceberg origin) engin
 ## License
 
 AGPL-3.0-or-later. See `LICENSE`.
+
+## Unified C ABI, Python Wheel & WASM
+
+Core primitives from this repository are also cross-pollinated into **[SMC17/zinging (`zig-substrate`)](https://github.com/SMC17/zinging)** with C11 ABI bindings (`199` symbols), standalone Python wheels, JSON-RPC daemon (`substrate serve`), and `wasm32` builds.
